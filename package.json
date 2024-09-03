@@ -1,0 +1,24 @@
+{
+  "name": "screenlife-capture-2.0",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "reset-node-modules": "find . -name \"node_modules\" -prune -exec rm -rf '{}' +",
+    "reset-libs": "rm -rf collection/management-interface/server/lib/ && rm -rf  labelling/server/lib/",
+    "reset": "npm run reset-node-modules && npm run reset-libs",
+    "install-all": "npm ci && npm --prefix collection/management-interface/server run compile && npm --prefix labelling/server run compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "./collection/cloud-functions",
+    "./collection/management-interface/server",
+    "./collection/management-interface/webapp",
+    "./collection/management-interface/shared",
+    "./shared/"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

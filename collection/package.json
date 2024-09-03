@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "install-cf": "npm --prefix ../ ci -w cloud-functions",
+    "deploy-cf": "npm run --prefix cloud-functions build && npm run --prefix cloud-functions deploy:all",
+    "install-mi": "npm --prefix ../ ci -w screenlife-collection-management-interface-webapp && npm --prefix management-interface/server run compile-migrate",
+    "run-mi-server": "npm run --prefix management-interface/server dev",
+    "run-mi-webapp": "npm run --prefix management-interface/webapp dev",
+    "mi": "concurrently -k npm:run-mi-*"
+  }
+}
