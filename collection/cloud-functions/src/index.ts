@@ -5,7 +5,7 @@ import { Firestore } from "@google-cloud/firestore";
 import { Storage } from "@google-cloud/storage";
 import { nanoid } from "nanoid";
 
-const BUCKET_URL = "<placeholder>";
+const BUCKET_ID = "<placeholder>";
 
 type ManifestData = {
   createdAt: number;
@@ -59,7 +59,7 @@ export const submitManifest = async (req: Request, res: Response) => {
 
   const storage = new Storage();
   const [url] = await storage
-    .bucket(BUCKET_URL)
+    .bucket(BUCKET_ID)
     .file(`${projectId}/${participantId}/${manifestId}.zip`)
     .getSignedUrl({
       version: "v4",
@@ -102,7 +102,7 @@ export const checkManifest = async (req: Request, res: Response) => {
     const storage = new Storage();
 
     const [exists] = await storage
-      .bucket(BUCKET_URL)
+      .bucket(BUCKET_ID)
       .file(`${projectId}/${participantId}/${manifestId}.zip`)
       .exists();
 
@@ -113,7 +113,7 @@ export const checkManifest = async (req: Request, res: Response) => {
       });
 
     const [metadata] = await storage
-      .bucket(BUCKET_URL)
+      .bucket(BUCKET_ID)
       .file(`${projectId}/${participantId}/${manifestId}.zip`)
       .getMetadata();
 
