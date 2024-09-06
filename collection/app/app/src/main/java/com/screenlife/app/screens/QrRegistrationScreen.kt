@@ -52,7 +52,8 @@ fun QrRegistrationScreen(navController: NavController) {
                         println("Registering.. on $url")
                         val coroutineScope = CoroutineScope(Dispatchers.IO)
                         coroutineScope.launch {
-                            Api.register(url, result.i, result.p)
+                            val success = Api.register(url, result.i, result.p, context)
+                            if (!success) return@launch
 
                             val edit = sharedPreferences.edit()
                             edit.putString("participantId", result.i)
