@@ -1,4 +1,4 @@
-package com.screenlife.app.ui.theme
+package com.screenlife.capture.app.ui.theme
 
 import android.app.Activity
 import android.os.Build

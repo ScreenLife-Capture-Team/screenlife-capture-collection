@@ -1,4 +1,4 @@
-package com.screenlife.app
+package com.screenlife.capture.app
 
 import android.os.Build
 import android.os.Bundle
@@ -12,21 +12,21 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.screenlife.app.screens.HomeScreen
-import com.screenlife.app.screens.HomeScreenRoute
-import com.screenlife.app.screens.ImagesScreen
-import com.screenlife.app.screens.ImagesScreenRoute
-import com.screenlife.app.screens.ManualRegistrationScreen
-import com.screenlife.app.screens.ManualRegistrationScreenRoute
-import com.screenlife.app.screens.OtherScreen
-import com.screenlife.app.screens.OtherScreenRoute
-import com.screenlife.app.screens.QrRegistrationScreen
-import com.screenlife.app.screens.QrRegistrationScreenRoute
-import com.screenlife.app.screens.StopActivityScreen
-import com.screenlife.app.screens.StopActivityScreenRoute
-import com.screenlife.app.screens.UploadLogsScreen
-import com.screenlife.app.screens.UploadLogsScreenRoute
-import com.screenlife.app.ui.theme.ScreenLifeTheme
+import com.screenlife.capture.app.screens.HomeScreen
+import com.screenlife.capture.app.screens.HomeScreenRoute
+import com.screenlife.capture.app.screens.ImagesScreen
+import com.screenlife.capture.app.screens.ImagesScreenRoute
+import com.screenlife.capture.app.screens.ManualRegistrationScreen
+import com.screenlife.capture.app.screens.ManualRegistrationScreenRoute
+import com.screenlife.capture.app.screens.OtherScreen
+import com.screenlife.capture.app.screens.OtherScreenRoute
+import com.screenlife.capture.app.screens.QrRegistrationScreen
+import com.screenlife.capture.app.screens.QrRegistrationScreenRoute
+import com.screenlife.capture.app.screens.StopActivityScreen
+import com.screenlife.capture.app.screens.StopActivityScreenRoute
+import com.screenlife.capture.app.screens.UploadLogsScreen
+import com.screenlife.capture.app.screens.UploadLogsScreenRoute
+import com.screenlife.capture.app.ui.theme.ScreenLifeTheme
 
 class MainActivity : ComponentActivity() {
     @RequiresApi(Build.VERSION_CODES.O)

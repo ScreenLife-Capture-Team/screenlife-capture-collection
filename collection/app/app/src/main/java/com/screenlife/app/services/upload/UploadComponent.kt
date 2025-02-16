@@ -22,8 +22,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.screenlife.app.services.upload.UploadScheduler
-import com.screenlife.app.screens.UploadLogsScreenRoute
+import com.screenlife.capture.app.services.upload.UploadScheduler
+import com.screenlife.capture.app.screens.UploadLogsScreenRoute
 import kotlinx.coroutines.delay
 
 

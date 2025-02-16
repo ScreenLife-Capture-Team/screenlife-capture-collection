@@ -1,4 +1,4 @@
-package com.screenlife.app.screens
+package com.screenlife.capture.app.screens
 
 import android.graphics.BitmapFactory
 import android.widget.Toast
@@ -31,8 +31,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.screenlife.app.services.capture.ScreenCaptureService
-import com.screenlife.app.ui.theme.ScreenLifeTheme
+import com.screenlife.capture.app.services.capture.ScreenCaptureService
+import com.screenlife.capture.app.ui.theme.ScreenLifeTheme
 import kotlinx.serialization.Serializable
 import java.io.File
 import java.text.SimpleDateFormat

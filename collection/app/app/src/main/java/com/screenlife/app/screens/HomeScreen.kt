@@ -1,4 +1,4 @@
-package com.screenlife.app.screens
+package com.screenlife.capture.app.screens
 
 import MediaProjectionComponent
 import UploadComponent
@@ -36,9 +36,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.navigation.NavController
-import com.screenlife.app.services.upload.UploadScheduler
-import com.screenlife.app.common.LocalData
-import com.screenlife.app.ui.theme.ScreenLifeTheme
+import com.screenlife.capture.app.services.upload.UploadScheduler
+import com.screenlife.capture.app.common.LocalData
+import com.screenlife.capture.app.ui.theme.ScreenLifeTheme
 import kotlinx.serialization.Serializable
 
 @Serializable

@@ -1,4 +1,4 @@
-package com.screenlife.app.services.upload
+package com.screenlife.capture.app.services.upload
 
 import android.content.Context
 import androidx.work.Worker

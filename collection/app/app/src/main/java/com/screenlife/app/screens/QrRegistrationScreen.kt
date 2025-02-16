@@ -1,4 +1,4 @@
-package com.screenlife.app.screens
+package com.screenlife.capture.app.screens
 
 import android.content.Context
 import androidx.compose.foundation.layout.Column
@@ -11,8 +11,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
-import com.screenlife.app.common.Api
-import com.screenlife.app.ui.theme.ScreenLifeTheme
+import com.screenlife.capture.app.common.Api
+import com.screenlife.capture.app.ui.theme.ScreenLifeTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

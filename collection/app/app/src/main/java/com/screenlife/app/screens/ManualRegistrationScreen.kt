@@ -1,4 +1,4 @@
-package com.screenlife.app.screens
+package com.screenlife.capture.app.screens
 
 import android.content.Context
 import androidx.compose.foundation.layout.Column
@@ -8,7 +8,7 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import com.screenlife.app.ui.theme.ScreenLifeTheme
+import com.screenlife.capture.app.ui.theme.ScreenLifeTheme
 import kotlinx.serialization.Serializable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue

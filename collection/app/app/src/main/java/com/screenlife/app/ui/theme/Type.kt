@@ -1,4 +1,4 @@
-package com.screenlife.app.ui.theme
+package com.screenlife.capture.app.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

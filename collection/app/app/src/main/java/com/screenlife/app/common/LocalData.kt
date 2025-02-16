@@ -1,8 +1,8 @@
-package com.screenlife.app.common
+package com.screenlife.capture.app.common
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.screenlife.app.services.capture.ScreenCaptureService
+import com.screenlife.capture.app.services.capture.ScreenCaptureService
 import java.io.File
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

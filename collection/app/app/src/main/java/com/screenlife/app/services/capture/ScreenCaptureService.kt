@@ -1,4 +1,4 @@
-package com.screenlife.app.services.capture
+package com.screenlife.capture.app.services.capture
 
 // ScreenCaptureService.kt
 import android.app.Notification
@@ -29,11 +29,11 @@ import android.text.StaticLayout
 import android.text.TextPaint
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.screenlife.app.MainActivity
-import com.screenlife.app.R
-import com.screenlife.app.common.Encryption
-import com.screenlife.app.common.LocalData
-import com.screenlife.app.common.Notifications
+import com.screenlife.capture.app.MainActivity
+import com.screenlife.capture.app.R
+import com.screenlife.capture.app.common.Encryption
+import com.screenlife.capture.app.common.LocalData
+import com.screenlife.capture.app.common.Notifications
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File

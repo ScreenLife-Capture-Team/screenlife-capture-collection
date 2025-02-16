@@ -36,11 +36,11 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.screenlife.app.common.LocalData
-import com.screenlife.app.screens.ImagesScreenRoute
-import com.screenlife.app.screens.StopActivityScreenRoute
-import com.screenlife.app.services.capture.ScreenCaptureService
-import com.screenlife.app.services.capture.ScreenCaptureService.Companion.hasUsageStatsPermission
+import com.screenlife.capture.app.common.LocalData
+import com.screenlife.capture.app.screens.ImagesScreenRoute
+import com.screenlife.capture.app.screens.StopActivityScreenRoute
+import com.screenlife.capture.app.services.capture.ScreenCaptureService
+import com.screenlife.capture.app.services.capture.ScreenCaptureService.Companion.hasUsageStatsPermission
 import kotlinx.coroutines.delay
 import java.io.File
 

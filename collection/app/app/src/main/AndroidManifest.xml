@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.screenlife.app"
+    package="com.screenlife.capture.app"
     >
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
@@ -28,7 +28,7 @@
         android:theme="@style/Theme.ScreenLife"
         tools:targetApi="31">
         <activity
-            android:name="com.screenlife.app.MainActivity"
+            android:name="com.screenlife.capture.app.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTask"
@@ -39,9 +39,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:enabled="true" android:exported="false" android:name="com.screenlife.app.services.capture.ScreenCaptureService" android:foregroundServiceType="mediaProjection" />
+        <service android:enabled="true" android:exported="false" android:name="com.screenlife.capture.app.services.capture.ScreenCaptureService" android:foregroundServiceType="mediaProjection" />
         <receiver
-            android:name="com.screenlife.app.receivers.BootCompletedReceiver"
+            android:name="com.screenlife.capture.app.receivers.BootCompletedReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>

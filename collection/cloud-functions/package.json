@@ -7,9 +7,9 @@
   "scripts": {
     "build": "npx tsc",
     "deploy:all": "npm run deploy:submit-manifest && npm run deploy:check-manifest && npm run deploy:verify-registration",
-    "deploy:submit-manifest": "gcloud functions deploy submitManifest --runtime nodejs20 --trigger-http --region asia-southeast1 --allow-unauthenticated",
-    "deploy:check-manifest": "gcloud functions deploy checkManifest --runtime nodejs20 --trigger-http --region asia-southeast1 --allow-unauthenticated",
-    "deploy:verify-registration": "gcloud functions deploy verifyRegistration --runtime nodejs20 --trigger-http --region asia-southeast1 --allow-unauthenticated"
+    "deploy:submit-manifest": "gcloud functions deploy submitManifest --runtime nodejs20 --trigger-http --region asia-southeast1 --allow-unauthenticated --gen2",
+    "deploy:check-manifest": "gcloud functions deploy checkManifest --runtime nodejs20 --trigger-http --region asia-southeast1 --allow-unauthenticated --gen2",
+    "deploy:verify-registration": "gcloud functions deploy verifyRegistration --runtime nodejs20 --trigger-http --region asia-southeast1 --allow-unauthenticated --gen2"
   },
   "keywords": [],
   "author": "",

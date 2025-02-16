@@ -1,4 +1,4 @@
-package com.screenlife.app.services.upload
+package com.screenlife.capture.app.services.upload
 
 import android.content.Context
 import android.os.Build
@@ -7,13 +7,13 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.screenlife.app.common.Api
-import com.screenlife.app.common.Encryption.getMd5ChecksumBase64
-import com.screenlife.app.common.LocalData
-import com.screenlife.app.common.Naming
-import com.screenlife.app.common.UploadLog
-import com.screenlife.app.common.WiFi
-import com.screenlife.app.services.capture.ScreenCaptureService
+import com.screenlife.capture.app.common.Api
+import com.screenlife.capture.app.common.Encryption.getMd5ChecksumBase64
+import com.screenlife.capture.app.common.LocalData
+import com.screenlife.capture.app.common.Naming
+import com.screenlife.capture.app.common.UploadLog
+import com.screenlife.capture.app.common.WiFi
+import com.screenlife.capture.app.services.capture.ScreenCaptureService
 import kotlinx.coroutines.runBlocking
 import java.io.BufferedInputStream
 import java.io.BufferedOutputStream

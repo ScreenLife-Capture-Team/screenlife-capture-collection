@@ -1,4 +1,4 @@
-package com.screenlife.app.common
+package com.screenlife.capture.app.common
 
 import java.io.ByteArrayInputStream
 import java.io.File

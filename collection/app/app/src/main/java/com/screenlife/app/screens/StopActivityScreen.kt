@@ -1,4 +1,4 @@
-package com.screenlife.app.screens
+package com.screenlife.capture.app.screens
 
 import MediaProjectionViewModel
 import android.Manifest
@@ -38,14 +38,14 @@ import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.navigation.NavController
-import com.screenlife.app.ui.theme.ScreenLifeTheme
+import com.screenlife.capture.app.ui.theme.ScreenLifeTheme
 import kotlinx.serialization.Serializable
 import kotlin.math.roundToInt
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.screenlife.app.MainActivity
-import com.screenlife.app.R
-import com.screenlife.app.common.LocalData
-import com.screenlife.app.services.capture.ScreenCaptureService
+import com.screenlife.capture.app.MainActivity
+import com.screenlife.capture.app.R
+import com.screenlife.capture.app.common.LocalData
+import com.screenlife.capture.app.services.capture.ScreenCaptureService
 
 @Serializable
 object StopActivityScreenRoute

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.screenlife.app'
+    namespace 'com.screenlife.capture.app'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.screenlife.app"
+        applicationId 'com.screenlife.capture.app'
         minSdk 24
         targetSdk 34
         versionCode 1

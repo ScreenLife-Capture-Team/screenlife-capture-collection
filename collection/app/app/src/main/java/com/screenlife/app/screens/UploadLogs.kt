@@ -1,4 +1,4 @@
-package com.screenlife.app.screens
+package com.screenlife.capture.app.screens
 
 import android.widget.Toast
 import androidx.compose.foundation.clickable
@@ -30,8 +30,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.screenlife.app.common.LocalData
-import com.screenlife.app.common.UploadLog
+import com.screenlife.capture.app.common.LocalData
+import com.screenlife.capture.app.common.UploadLog
 import kotlinx.serialization.Serializable
 import java.text.SimpleDateFormat
 import java.util.Date

@@ -1,4 +1,4 @@
-package com.screenlife.app
+package com.screenlife.capture.app
 
 import org.junit.Test
 

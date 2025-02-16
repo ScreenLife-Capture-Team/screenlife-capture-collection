@@ -1,4 +1,4 @@
-package com.screenlife.app.common
+package com.screenlife.capture.app.common
 
 import android.content.Context
 import android.os.Build

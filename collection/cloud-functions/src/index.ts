@@ -5,7 +5,7 @@ import { Firestore } from "@google-cloud/firestore";
 import { Storage } from "@google-cloud/storage";
 import { nanoid } from "nanoid";
 
-const BUCKET_ID = "<placeholder>";
+import { env } from "process";
 
 type ManifestData = {
   createdAt: number;
@@ -34,6 +34,7 @@ export const verifyRegistration = async (req: Request, res: Response) => {
 
 // To be called before sending of screenshots / app data
 export const submitManifest = async (req: Request, res: Response) => {
+  const BUCKET_ID = env.BUCKET_ID;
   const { projectId, participantId, hash, imagesNum } = req.body;
   console.log("submitManifest", projectId, participantId, hash, imagesNum);
 
@@ -73,6 +74,7 @@ export const submitManifest = async (req: Request, res: Response) => {
 
 // To be called after sending of screenshots / app data
 export const checkManifest = async (req: Request, res: Response) => {
+  const BUCKET_ID = env.BUCKET_ID;
   const { projectId, participantId, manifestId } = req.body;
   console.log("checkManifest", projectId, participantId, manifestId);
 

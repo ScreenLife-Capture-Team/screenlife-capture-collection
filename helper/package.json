@@ -1,0 +1,21 @@
+{
+  "name": "helper",
+  "version": "1.0.0",
+  "description": "Helper functions for collection module",
+  "main": "helper.js",
+  "types": "helper.d.ts",
+  "scripts": {
+    "start": "tsx helper.ts"
+  },
+  "dependencies": {
+    "@google-cloud/run": "^1.5.0",
+    "@inquirer/prompts": "^7.2.3",
+    "@listr2/prompt-adapter-inquirer": "^2.0.18",
+    "listr2": "^8.2.5",
+    "yoctocolors": "^2.1.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,4 +1,4 @@
-package com.screenlife.app.common
+package com.screenlife.capture.app.common
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -11,8 +11,8 @@ import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.screenlife.app.MainActivity
-import com.screenlife.app.R
+import com.screenlife.capture.app.MainActivity
+import com.screenlife.capture.app.R
 
 class Notifications {
     companion object {

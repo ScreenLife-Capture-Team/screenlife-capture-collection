@@ -45,7 +45,8 @@ Here are the general steps when collecting data using ScreenLife Capture:
       - This URL will typically end with ".net" or ".com", ignore the actual name of the function (e.g. "submitManifest")
 
 ## Setup Management Interface
-1. Install the required dependancies for the management interface using the command npm run install-mi in this folder, /collection.
+1. Install the required dependancies for the management interface using the command `npm run install-mi` in this folder, `/collection`.
+> Note: Please check if you are required to run the above command by checking the "Installing Dependancies" section in the [root's README](../readme.md).
 2. Update the Bucket ID in `/collection/management-interface/server/config/default.json`.
 3. Run the command `npm run mi` in this folder, `/collection` to start the management interface
 4. Open the management interface in the browser at "http://localhost:3000"

@@ -7,11 +7,14 @@
     "reset-node-modules": "find . -name \"node_modules\" -prune -exec rm -rf '{}' +",
     "reset-libs": "rm -rf collection/management-interface/server/lib/ && rm -rf  labelling/server/lib/",
     "reset": "npm run reset-node-modules && npm run reset-libs",
-    "install-all": "npm ci && npm --prefix collection/management-interface/server run compile && npm --prefix labelling/server run compile"
+    "install-all": "npm ci && npm --prefix collection/management-interface/server run compile && npm --prefix labelling/server run compile",
+    "helper": "npm --prefix helper ci --silent && npm --prefix helper run start"
   },
   "author": "",
   "license": "ISC",
   "workspaces": [
+    "./labelling/server",
+    "./labelling/webapp",
     "./collection/cloud-functions",
     "./collection/management-interface/server",
     "./collection/management-interface/webapp",

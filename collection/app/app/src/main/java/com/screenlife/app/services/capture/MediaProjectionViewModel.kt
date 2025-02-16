@@ -11,7 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.screenlife.app.services.capture.ScreenCaptureService
+import com.screenlife.capture.app.services.capture.ScreenCaptureService
 
 class MediaProjectionViewModel(application: Application) : AndroidViewModel(application) {
     private val _projectionStatus = MutableLiveData<Boolean>()
