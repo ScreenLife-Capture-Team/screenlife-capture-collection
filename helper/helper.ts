@@ -1,5 +1,5 @@
 import colors from "yoctocolors";
-import { select, Separator } from "@inquirer/prompts";
+import { select, confirm, Separator } from "@inquirer/prompts";
 import { v2 } from "@google-cloud/run";
 import { basicRequirementsTasks } from "./tasklists/basicRequirements";
 import { Listr } from "listr2";
@@ -37,6 +37,16 @@ const main = async () => {
   console.log("\nBasic requirements okay 👍");
 
   async function runManagementInterface(): Promise<void> {
+    const shouldContinue = await confirm({
+      message:
+        "The Management Interface will run on http://localhost:3095 if successful. Do you want to continue?",
+    });
+
+    if (!shouldContinue) {
+      console.log("Management Interface startup cancelled.");
+      return;
+    }
+
     console.log("\nStarting Management Interface...");
     try {
       const collectionPath = path.join("..", "collection");
