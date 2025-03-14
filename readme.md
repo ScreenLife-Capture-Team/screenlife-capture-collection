@@ -1,26 +1,55 @@
-# ScreenLife Capture
+# ScreenLife Research Platform
 
 ## Overview
-This repository contains the source code for the ScreenLife Capture project. The repository is split into two main sections:
+ScreenLife is a research platform designed to systematically capture and analyze smartphone usage patterns through periodic screenshots. The platform implements industry-standard encryption protocols to ensure secure data collection and transmission. This repository contains both the data collection Android application and the research data management infrastructure.
 
-1. Collection - for components related to the "collection" phase of a study
-2. Labelling - for components related to the "labelling" phase of a study
+The repository is organized into two main components:
 
-Please find more details in each section.
+1. **Collection** - Contains the Android application and cloud infrastructure for secure data collection
+2. **Labelling** - Contains tools and interfaces for research data analysis and labeling
 
-## Setup
+## Important Notice
+This platform is strictly for authorized research purposes only. Users must have formal consent to participate in research studies utilizing this platform. If you have not provided formal consent, please do not attempt to use or install the application.
+
+## Technical Architecture
+
+### Android Application
+The collection app is built with Kotlin using modern Android architecture components:
+- MediaProjection API for secure screen capture
+- WorkManager for reliable background upload services
+- Encrypted local storage for data security
+- WiFi and device state management
+- Background service auto-start capability
+- Push notification system for participant communication
+
+### Cloud Infrastructure
+The platform uses Google Cloud Platform for secure data storage and processing. Key components:
+- Cloud Functions for data processing
+- Cloud Storage for encrypted data
+- Authentication and access control systems
+- Research management interface
+
+## Setup Requirements
 
 ### Prerequisites
-To run the various components of this monorepo, please ensure you have the following installed:
+1. `node` (> v20.17.0)
+2. `npm` (> v10.8.2)
+3. `gcloud` CLI tools
+4. `git` (recommended)
+5. Android development environment for app modifications
 
-1. `node` (> v20.17.0) required
-2. `npm` (> v10.8.2) required
-3. `gcloud` required (for the collection components)
-4. `git` is highly recommended to be able to update the repo for the latest features / bug fixes
+### Cloud Environment Setup
+Configure your GCP project:
+   - Run `npm run helper` and follow the guided setup
+   - This will configure necessary cloud resources and security settings
+   - You'll need GCP project owner permissions for initial setup
 
-### Installing Dependancies
-If you would like to run an individual component of the monorepo (e.g. running the management interface, deploying cloud functions, or running the labelling platform), please follow the installation command within their respective sections. You will be asked to install dependancies for that indiviual component using `npm run install-<component>` in their respective folders.
+### Technical Knowledge Requirements
+To work with this repository, you should be familiar with:
+- Modern Android development (Kotlin, AndroidX libraries)
+- Node.js and TypeScript for cloud functions
+- Google Cloud Platform services
+- Security best practices for handling research data
+- Git version control
 
-If you would like to install the dependancies for all components (or if you are simply not sure what you will be running on the repository), please use the command `npm run install-all` in the root folder. After doing this, you will not need to perform the individual installation commands.
-
-For instructions on how to proceed after installing the dependancies for all components, please navigate to the [collection](./collection/readme.md) or [labelling](./labelling/readme.md) READMEs.
+For detailed setup instructions, please refer to the respective README files in the [collection](./collection/readme.md) and [labelling](./labelling/readme.md) directories.

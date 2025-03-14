@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">ScreenLife</string>
+
+    <!-- About Dialog -->
+    <string name="dialog_about_title">About ScreenLife Research Application</string>
+    <string name="dialog_about_body">ScreenLife is a research application that systematically captures and analyzes smartphone usage patterns through periodic screenshots. All collected data is encrypted using industry-standard protocols before secure transmission to our research infrastructure.\n\nThis application is strictly for authorized research participants. If you have not provided formal consent to participate in this research study, please uninstall this application immediately.</string>
+
+    <!-- Registration Dialog -->
+    <string name="dialog_registration_title">Research Participation Registration</string>
+    <string name="dialog_registration_body">You are initiating device registration for participation in a research study. Please proceed only if you have formally consented to participate and can verify the authenticity of the research administrator.</string>
+
+    <!-- Reset Dialog -->
+    <string name="dialog_reset_title">Profile Reset Confirmation</string>
+    <string name="dialog_reset_body">Please confirm that you would like to reset your research participant profile. This action cannot be undone.</string>
+
+    <!-- Common Dialog Buttons -->
+    <string name="dialog_common_ok">Confirm</string>
+    <string name="dialog_common_continue">Proceed</string>
+    <string name="dialog_common_cancel">Cancel</string>
 </resources>

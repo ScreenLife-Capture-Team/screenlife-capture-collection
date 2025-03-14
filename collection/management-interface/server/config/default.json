@@ -14,5 +14,5 @@
     "connection": "local.sqlite",
     "useNullAsDefault": true
   },
-  "bucketId": "<placeholder>"
+  "bucketId": "<not loaded>"
 }

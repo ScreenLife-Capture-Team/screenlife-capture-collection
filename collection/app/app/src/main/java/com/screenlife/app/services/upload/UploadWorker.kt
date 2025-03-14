@@ -86,9 +86,11 @@ class UploadWorker(appContext: Context, workerParams: WorkerParameters) :
         }
 
         try {
-            val onWifi = WiFi.isWifiConnected(applicationContext)
-            if (!onWifi) {
-                throw Exception("Not on WiFi")
+            val wifiStatus = WiFi.isWifiConnected(applicationContext)
+            when (wifiStatus) {
+                is WiFi.Companion.WifiStatus.Connected -> { /* continue with upload */ }
+                is WiFi.Companion.WifiStatus.NotConnected -> throw Exception("Not on WiFi")
+                is WiFi.Companion.WifiStatus.Unknown -> throw Exception("Network state unknown")
             }
 
             val startTime = System.currentTimeMillis()

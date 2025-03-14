@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.ScreenLife" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.ScreenLife" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Alert Dialog styling -->
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <!-- Custom AlertDialog theme -->
+    <style name="AlertDialogTheme" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:buttonBarButtonStyle">@style/AlertDialogButtonStyle</item>
+    </style>
+
+    <!-- Custom style for AlertDialog buttons -->
+    <style name="AlertDialogButtonStyle" parent="android:Widget.Material.Button.Borderless">
+        <item name="android:textColor">#367F72</item>  <!-- Button text color -->
+    </style>
+
 </resources>

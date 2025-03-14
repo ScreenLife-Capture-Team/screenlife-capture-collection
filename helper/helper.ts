@@ -13,6 +13,7 @@ import { getManagementInterfaceTasks } from "./tasklists/managementInterfaceSetu
 import os from "os";
 import { execSync } from "child_process";
 import path from "path";
+const fs = require("fs").promises;
 
 const ServicesClient = v2.ServicesClient;
 
@@ -47,10 +48,16 @@ const main = async () => {
       return;
     }
 
+    const projectFile = path.join("./", "project.json");
+    const projectData = JSON.parse(await fs.readFile(projectFile, "utf8"));
+    const bucketId = projectData.bucketId;
+    if (!bucketId)
+      throw `Bucket ID not found in project.json. Please ensure the "Setup Cloud Bucket step is completed.`;
+
     console.log("\nStarting Management Interface...");
     try {
       const collectionPath = path.join("..", "collection");
-      await execSync("npm run mi", {
+      await execSync(`BUCKET_ID=${bucketId} npm run mi`, {
         cwd: collectionPath,
         stdio: "inherit",
       });

@@ -1,14 +1,20 @@
 package com.screenlife.capture.app.screens
 
 import android.widget.Toast
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.AlertDialog
@@ -25,9 +31,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.screenlife.capture.app.common.LocalData
@@ -106,7 +115,7 @@ fun UploadLogsScreen(navController: NavController) {
             .padding(innerPadding)
             .padding(horizontal = 16.dp)) {
             if (logEntries.isEmpty()) {
-                Text(text = "No upload logs", color = Color.Gray)
+                Text(text = "No upload logs", color = Color.DarkGray)
             }
             LazyColumn {
                 items(items= logEntries, itemContent = { log ->
@@ -139,14 +148,38 @@ fun LogRow(log: UploadLog, onRowClick: (UploadLog) -> Unit) {
             .fillMaxWidth()
             .padding(vertical = 4.dp)
             .clickable { onRowClick(log) }
-            .padding(8.dp)
+            .padding(8.dp),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(
-            text = formattedDate,
+        Column(
             modifier = Modifier.weight(1f)
-        )
-        Text(
-            text = if (log.success) "Success" else "Failed",
-        )
+        ) {
+            Text(
+                text = formattedDate,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = log.details ?: "No details",
+                color = Color.Gray,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.padding(top = 2.dp)
+            )
+        }
+        Box(
+            modifier = Modifier
+                .size(24.dp)
+                .background(
+                    color = if (log.success) Color(0xFF4CAF50) else Color(0xFFE57373),
+                    shape = CircleShape
+                )
+        ) {
+            Icon(
+                imageVector = if (log.success) Icons.Filled.Check else Icons.Filled.Close,
+                contentDescription = if (log.success) "Success" else "Failed",
+                tint = Color.White,
+                modifier = Modifier.padding(4.dp)
+            )
+        }
     }
 }

@@ -119,6 +119,18 @@ class LocalData {
             return sharedPreferences.getBoolean("shouldBeCapturing", false)
         }
 
+        fun getHasShownAppInfo(context: Context): Boolean {
+            val sharedPreferences = context.getSharedPreferences("default", Context.MODE_PRIVATE)
+            return sharedPreferences.getBoolean("hasShownAppInfo", false)
+        }
+
+        fun setHasShownAppInfo(context: Context) {
+            val sharedPreferences = context.getSharedPreferences("default", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putBoolean("hasShownAppInfo", true)
+            editor.apply()
+        }
+
         fun reset(context: Context) {
             val sharedPreferences = context.getSharedPreferences("default", Context.MODE_PRIVATE)
 
@@ -129,6 +141,7 @@ class LocalData {
             edit.remove("key")
             edit.remove("uploadLogs")
             edit.remove("shouldBeCapturing")
+            edit.remove("hasShownAppInfo")
 
             edit.apply()
 

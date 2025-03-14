@@ -56,11 +56,13 @@ fun UploadComponent(navController: NavController, disabled: Boolean = false) {
                     TextButton(onClick = { navController.navigate(UploadLogsScreenRoute) }) {
                         Text(text = "Logs")
                     }
-                    Spacer(modifier = Modifier.width(8.dp))
-                    TextButton(onClick = {
-                        UploadScheduler.cancelRunningUpload(context)
-                    }, enabled = uploading) {
-                        Text(text = "Cancel")
+                    if (uploading) {
+                        Spacer(modifier = Modifier.width(8.dp))
+                        TextButton(onClick = {
+                            UploadScheduler.cancelRunningUpload(context)
+                        }, enabled = uploading) {
+                            Text(text = "Cancel")
+                        }
                     }
                     Spacer(modifier = Modifier.width(8.dp))
                     Button(onClick = {

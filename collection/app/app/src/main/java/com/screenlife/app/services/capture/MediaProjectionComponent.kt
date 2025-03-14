@@ -185,7 +185,7 @@ fun MediaProjectionComponent(
                 Text(
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
-                    text = if (loading) "Projection status is loading" else if (projectionStatus) "Projection is running" else "Projection is stopped"
+                    text = if (loading) "Recording status is loading" else if (projectionStatus) "Recording is running" else "Recording is stopped"
                 )
                 Text(text = "$numImages images")
             }
@@ -195,7 +195,7 @@ fun MediaProjectionComponent(
                         onClick = { navController.navigate(ImagesScreenRoute) },
                         enabled = !disabled
                     ) {
-                        Text(text = "View")
+                        Text(text = "Troubleshoot")
                     }
                     Spacer(modifier = Modifier.width(8.dp))
                     if (loading) {
@@ -206,13 +206,13 @@ fun MediaProjectionComponent(
                         OutlinedButton(onClick = {
                             navController.navigate(StopActivityScreenRoute)
                         }, enabled = !disabled) {
-                            Text(text = "Stop Projection")
+                            Text(text = "Stop Recording")
                         }
                     } else {
                         Button(onClick = {
                             startProjection()
                         }, enabled = !disabled) {
-                            Text(text = "Start Projection")
+                            Text(text = "Start Recording")
                         }
                     }
                 }
